@@ -9,30 +9,48 @@ p{
 .container{
     border: 1px solid black;
     width: 500px;
-    height: 500px;
+    min-height: 500px; /* ao invés de height fixo */
+    height: auto;
     margin: 50px auto;
     }
 .numbers{
   
    display: grid;
-    grid-template-columns: repeat(3, 50px); 
+    grid-template-columns: repeat(4, 50px); 
     gap: 10px; 
     margin: 20px auto;
     justify-content: center;
 }
-.numbers span{
- width: 50px;
+.numbers button{
+    width: 50px;
     height: 50px;
     border: 1px solid black;
-    text-align: center;
     font-size: 30px;
-    
-    /* Centraliza o número perfeitamente no meio do quadrado */
+
     display: flex;
     justify-content: center;
     align-items: center;
+
+    background: none;  /* remove o cinza padrão */
+    cursor: pointer;    /* mostra que é clicável */
+    font-family: inherit; /* botão não herda fonte por padrão */
+}
+.numbers button:first-child {
+    grid-column: span 2;
+    width: auto;
+}
+.numbers button:nth-last-child(1) {
+    grid-column: span 2;
+    width: auto;
     
 }
-.numbers span:nth-last-child(1) {
-    grid-column: 2;
+input {
+    width: 230px;           /* mesmo tamanho do grid: 4*50px + 3*10px */
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #000;
+    margin: 0 auto 20px auto;
+    display: block;
+    text-align: right;      /* calculadoras alinham números à direita */
 }
