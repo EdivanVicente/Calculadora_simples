@@ -1,39 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+   <link rel="shortcut icon" href=" img/favicon.png" type="image/x-icon">
+
     <script src="js/script.js" defer></script>
-  
-    <title>calculadora</title>
-</head>
-<body>
+    <title>Calculator</title>
+  </head>
+  <body>
     <div class="container">
-        <h1>Calculadora </h1>
-        <p>O valor total é: R$ <span id="custoTotal">0.00</span></p>
-   
-        <input type="text" id="input" placeholder="Digite um número" />
-        <div class="numbers">
-            <button type="button" class="btn-numero" data-acao="limpar">C</button>
-            <button type="button" class="btn-numero" data-acao="apagarUltimo">&lt;</button>
-            <button type="button" class="btn-numero" data-valor="/">/</button>
-            <button type="button" class="btn-numero" data-valor="7">7</button>
-            <button type="button" class="btn-numero" data-valor="8">8</button>
-            <button type="button" class="btn-numero" data-valor="9">9</button>
-            <button type="button" class="btn-numero" data-valor="*">*</button>
-            <button type="button" class="btn-numero" data-valor="4">4</button>
-            <button type="button" class="btn-numero" data-valor="5">5</button>
-            <button type="button" class="btn-numero" data-valor="6">6</button>
-            <button type="button" class="btn-numero" data-valor="-">-</button>
-            <button type="button" class="btn-numero" data-valor="3">3</button>
-            <button type="button" class="btn-numero" data-valor="2">2</button>
-            <button type="button" class="btn-numero" data-valor="1">1</button>
-            <button type="button" class="btn-numero" data-valor="+">+</button>
-            <button type="button" class="btn-numero" data-valor="0">0</button>
-            <button type="button" class="btn-numero" data-valor=".">.</button>
-            <button type="button" class="btn-numero" data-acao="calcular">=</button>          
-        </div>
+      <h1>Calculadora</h1>
+      <div class="display-panel"> <p id="history"></p> <input type="text" id="display" placeholder="Enter a number" readonly /> </div>
+      <div class="keypad">
+        <button type="button" class="btn-number" data-action="clear">C</button>
+        <button type="button" class="btn-number" data-action="backspace">
+          &lt;
+        </button>
+        <button type="button" class="btn-number" data-value="/">/</button>
+        <button type="button" class="btn-number" data-value="7">7</button>
+        <button type="button" class="btn-number" data-value="8">8</button>
+        <button type="button" class="btn-number" data-value="9">9</button>
+        <button type="button" class="btn-number" data-value="*">*</button>
+        <button type="button" class="btn-number" data-value="4">4</button>
+        <button type="button" class="btn-number" data-value="5">5</button>
+        <button type="button" class="btn-number" data-value="6">6</button>
+        <button type="button" class="btn-number" data-value="-">-</button>
+        <button type="button" class="btn-number" data-value="1">1</button>
+        <button type="button" class="btn-number" data-value="2">2</button>
+        <button type="button" class="btn-number" data-value="3">3</button>
+        <button type="button" class="btn-number" data-value="+">+</button>
+        <button type="button" class="btn-number" data-value="0">0</button>
+        <button type="button" class="btn-number" data-value=".">.</button>
+        <button type="button" class="btn-number" data-action="calculate">
+          =
+        </button>
+      </div>
     </div>
-</body>
+  </body>
 </html>
